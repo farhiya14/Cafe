@@ -1,0 +1,6 @@
+id,name,address,number,courier,status,items
+1,Ron,123 weasly farm,12345678909,2,delivered,"1,2,4,4"
+2,Letty,With Dom,12365478922,4,delivered,"1,2,3,4,5"
+3,Hamse,over the rainbow,12345678900,4,on the way,"1,4,3"
+4,Finn,the woods,14785236900,3,preparing,"4,5,2,6,1"
+5,Simba,With Pumba,45698712344,3,preparing,"3,4,5"

@@ -327,16 +327,35 @@ def courier_menu():
 
 def load_file_products():
     print("\nProducts:")
-    with open("products list.txt", "r")as my_file:
-        contents = print(str(my_file.read().rstrip()))
-        return contents
+    with open("products list.txt", "r") as my_file:
+        reader = my_file.readlines()
+        global products
+        products = []
+        for row in reader:
+            products.append(row)
+            print(row.strip())
 
 
 def load_file_couriers():
     print("\nCouriers:")
     with open("couriers list.txt", "r") as my_file:
-        contents = print(str(my_file.read().rstrip()))
-        return contents
+        reader = my_file.readlines()
+        global couriers
+        couriers = []
+        for row in reader:
+            couriers.append(row.strip())
+
+            #prints each name in a row
+            print(row.strip())
+            
+        
+        # prints in list like []
+        print(couriers)
+        
+        for i, courier in enumerate(couriers):
+            i += 1
+            #prints each name in a row with index
+            print(i,courier)
 
 
 def add_new_product_file():
@@ -385,6 +404,6 @@ def checking_file_existance_couriers():
         load_file_couriers()
 
 
-# checking_file_existance_products()
-# checking_file_existance_couriers()
-# main_menu()
+checking_file_existance_products()
+checking_file_existance_couriers()
+main_menu()

@@ -1,4 +1,4 @@
-import app
+# import app
 
 orders = [{"name": "Tom",
            "address": "123 queen street",
@@ -89,7 +89,7 @@ def add_new_order():
     orders.append(order)
 
     print("\nOrder has been added\n")
-    print("\n" + orders + "\n")
+    print("\n" , orders , "\n")
     return order_menu()
 
 

@@ -773,6 +773,7 @@ def insert_order_to_table(o_id, name, address, number, courier, status, items):
 
     print("Database has been successfully updated")
 
+
 def sort_by_status():
 
     cursor = connection.cursor()

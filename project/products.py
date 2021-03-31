@@ -91,7 +91,6 @@ def new_name():
 
     if confirm == 0:
         pass
-        # return new_product_name
     elif confirm == 1:
         return new_name()
     else:
@@ -309,6 +308,15 @@ def checking_file_existance_products():
         save_updated_products()
         load_file_products()
 
+def products_list():
+    with open("products list.csv", mode='r+') as file:
+        reader = csv.DictReader(file, delimiter=',')
+        products = []
+        for i, row in enumerate(reader):
+            i += 1
+            products.append(row)
+    return products
+
 #------------------------Database connections--------------------------------------------------
 def get_products_from_database():
     sql = 'SELECT * FROM Products'
@@ -374,3 +382,8 @@ def remove_from_database(the_id):
 
     print("Database has been successfully updated")
 
+# checking_file_existance_products()
+
+products_listed = products_list()
+
+print(products_listed)

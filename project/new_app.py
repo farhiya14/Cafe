@@ -9,6 +9,7 @@ def main_menu():
     input1 = int(input("Where to: "))
     from products import product_menu
     try:
+        
         if input1 == 0:
             print("Exiting App")
             return quit()
